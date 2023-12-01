@@ -1,6 +1,6 @@
 # LibraryApp
 
-This Project are tutorials by ODIN Project, built using Express.js, EJS Templating languange, and MongoDB (Mongoose)
+This Project are tutorials by ODIN Project, built using Express.js, PUG / Jade Templating languange, and MongoDB (Mongoose)
 
 ## Express App Setup
 
