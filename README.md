@@ -8,7 +8,7 @@ This repository contains an Express.js application.
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/ToHe-MT/FaceRecognitionAPI.git`
+1. Clone the repository: `git clone https://github.com/ToHe-MT/LibraryApp.git`
 
 
 2. Install dependencies: `npm install`
