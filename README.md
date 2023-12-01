@@ -21,6 +21,10 @@ Create a `.env` file in the root directory of the project and add the following 
 - `PORT` - The port number on which the server will run. or by default 4000
 - `MONGODB_URI` - MongoDB Atlas URL (Do not forget to setting up on your mongoDb atlas)
 
+### PopulateDB
+
+There is function that I made to populate the DB Instead of adding it one by one
+`node populatedb.js`
 
 ### To run the server use 
 
