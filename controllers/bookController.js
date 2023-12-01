@@ -37,6 +37,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 //Display List of Books
 exports.book_list = asyncHandler(async (req, res, next) => {
     const allBooks = await Book.find({}, "title author")
+        .populate('author')
         .sort({ title: 1 })
         .exec();
 
@@ -72,7 +73,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
         Author.find().exec(),
         Genre.find().exec(),
     ]);
-    if (allAuthors.length > 0 && allGenres.length>0) {
+    if (allAuthors.length > 0 && allGenres.length > 0) {
         res.render("book_form", {
             title: "Create Book",
             authors: allAuthors,
@@ -81,14 +82,14 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
     } else {
         let message;
         if (allAuthors.length === 0 && allGenres.length === 0) {
-            message= "No Authors and Genres Available, Please Create Author and Genre"
-        } else if (allAuthors.length > 0){
-            message= "No Genres Available, Please Create Genre"
+            message = "No Authors and Genres Available, Please Create Author and Genre"
+        } else if (allAuthors.length > 0) {
+            message = "No Genres Available, Please Create Genre"
         } else {
-            message= "No Authors Available, Please Create Author"
+            message = "No Authors Available, Please Create Author"
         }
-        res.render("create_Error",{
-            title:"Create Book",
+        res.render("create_Error", {
+            title: "Create Book",
             message: message
         })
     }
